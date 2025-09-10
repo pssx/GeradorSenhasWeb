@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gerador de Senha</h1>
+            <p>Crie senhas.</p>
+        </div>
+
+        <div class="password-info">
+            <span>Nivel de segurança da sua senha: </span>
+            <span id="password-score" class="score-text">Nenhuma</span>
+        </div>
+
+        <div class="card">
+            <div class="password-display" id="password-display">
+                Sua senha será exibida aqui
+            </div>
+            
+            <div class="button-group">
+                <button id="copy-button" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    Copiar Senha
+                </button>
+                <button id="generate-button" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon"><path d="M3 12a9 9 0 0 1 9-9c2.375 0 4.514.981 6.066 2.583m.324 1.353C19.824 7.556 21 9.689 21 12a9 9 0 0 1-9 9c-2.375 0-4.514-.981-6.066-2.583M3 11v-1l4-4M21 13v1l-4 4"></path></svg>
+                    Gerar Senha
+                </button>
+            </div>
+        </div>
+
+        <div class="card options-card">
+            <div class="options-group">
+                <div class="option-item">
+                    <h3>Comprimento da Senha</h3>
+                    <span id="length-display">53</span>
+                </div>
+                <input type="range" id="length-slider" min="4" max="120" value="53" class="slider">
+            </div>
+
+            <div class="additional-options">
+                <h3>Opções adicionais</h3>
+                <div class="grid-options">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Maiúsculas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Minúsculas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Números</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Símbolos</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
